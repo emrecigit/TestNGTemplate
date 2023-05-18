@@ -19,47 +19,4 @@ public class ReusableMethods {
         }
     }
 
-
-
-
-    public static void tumSayfaFotografCek(WebDriver driver, String methodNameGetir)  {
-        TakesScreenshot tss = (TakesScreenshot) driver;
-        LocalDateTime ldt = LocalDateTime.now();
-        String tarihEtiketi = methodNameGetir+"_"+"FullScreen"+"_"+ldt.getYear()+"_"+ldt.getMonthValue()+"_"
-                +ldt.getDayOfMonth()+"_"+ldt.getHour()+"_"+ldt.getMinute()+"_"+ldt.getSecond()+".png";
-        String path= "target/ekranResimleri/"+tarihEtiketi;
-        File tumSayfaFotograf= new File(path);
-        File geciciResim = tss.getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(geciciResim,tumSayfaFotograf);
-        } catch (IOException e) {
-        }
-    }
-    public static void webElementFotografCek(WebDriver driver, WebElement webElement , String methodNameGetir) {
-        LocalDateTime ldt = LocalDateTime.now();
-        String tarihEtiketi = methodNameGetir+"_"+ "WebElement"+"_"+ldt.getYear()+"_"+ldt.getMonthValue()+"_"
-                +ldt.getDayOfMonth()+"_"+ldt.getHour()+"_"+ldt.getMinute()+"_"+ldt.getSecond()+".png";
-        String path= "target/ekranResimleri/"+tarihEtiketi;
-        File tumSayfaFotograf= new File(path);
-        File geciciResim = webElement.getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(geciciResim,tumSayfaFotograf);
-        } catch (IOException e) {
-        }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(methodNameGetir());
-    }
-
-    public static String  methodNameGetir() {
-        String currentMethodName = Thread.currentThread().getStackTrace()[2].getMethodName();
-        return currentMethodName;
-    }
-
-    //     public static String methodNameGetir() {
-    //     StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace(); // Method ismini getirir 2-1
-    //     String currentMethodName = stackTrace[1].getMethodName();                // Method ismini getirir 2-2
-    //     return currentMethodName;
-    // }
 }

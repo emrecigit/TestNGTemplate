@@ -1,10 +1,12 @@
-package day15_POM;
+package tests.day15_POM;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualitydemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TakePhotoMethods;
 
 public class C06_QualitydemyNegatifLoginTesti {
     @Test
@@ -24,6 +26,7 @@ public class C06_QualitydemyNegatifLoginTesti {
 
         // basarili olarak giris yapilamadigini test edin
         Assert.assertTrue(qualitydemyPage.emailKutusu.isEnabled());
+
         // sayfayi kapatin
 
         Driver.closeDriver();
