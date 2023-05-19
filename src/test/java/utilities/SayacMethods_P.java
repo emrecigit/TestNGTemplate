@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.time.LocalTime;
 
-public class Sayac {
+public class SayacMethods_P {
     @Test
     public void Sayac(){
         // x saniyelik bir sayac yapalim

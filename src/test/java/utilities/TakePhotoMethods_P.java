@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-public class TakePhotoMethods {
+public class TakePhotoMethods_P {
     public static void tumSayfaFotografCek(WebDriver driver, String methodNameGetir)  {
         TakesScreenshot tss = (TakesScreenshot) driver;
         LocalDateTime ldt = LocalDateTime.now();
